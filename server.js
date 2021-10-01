@@ -15,9 +15,9 @@ app.get("/pokemon", (req, res) => {
     res.render("index.ejs", { allPokemon: pokemon });
 }); 
 
-//NEW
+//NEW- form create a new pokemon
 app.get("/pokemon/new", (req, res) => {
-    res.send("hello world1!")
+    res.render("new.ejs")
 })
 
 //DELETE
@@ -30,9 +30,9 @@ app.put("/pokemon/:id", (req, res) => {
     res.send("hello world3!")
 })
 
-//CREATE
+//CREATE- route when u want to add
 app.post("/pokemon", (req, res) => {
-    res.render("new.ejs");
+    // res.render("new.ejs");
 });
 
 //EDIT

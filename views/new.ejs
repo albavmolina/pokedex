@@ -7,9 +7,30 @@ GET /pokemon/new -->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>create new pokemont</title>
 </head>
 <body>
-    <h1> create new pokemon </h1>
+    <h1> new pokemon page </h1>
+
+    <form action="pokemon" method="POST">
+        <h3>
+            <input type="text" name="name" value="pokemon-name" /> 
+            <input type="text" name="type" value="pokemon-type"/> </h3>  
+        
+        <h3> Stats: </h3> 
+
+        <h5>
+            hp: <input type="number" name="hp"/> 
+            attack: <input type="number" name="attack" /> 
+            defense: <input type="number" name=defense"> 
+            spattack: <input type="number" name="spattack" />
+            speed: <input type="number" name="speed" /> 
+        </h5>
+
+        <h3> Img: <input type="file" name="img" /></h3>
+        <input type="submit" value="add new pokemon!">
+    </form>
 </body>
+
 </html>
+
