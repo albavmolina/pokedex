@@ -8,11 +8,15 @@
 </head>
 <body>
     <h1> Images Click </h1>
- <% for(let i = 0; i < allPokemon.length; i++){ %>  
-        <img src="<%= allPokemon[i].img%>"> }      
- <%   } %>
+
+ <% for(let i = 0; i < allPokemon.length; i++){ %> 
+    <a href="/pokemon/<%= i %>" </a> 
+       <img src="<%= allPokemon[i].img%>"> }      
+ <%   } %> 
 </body>
+
 </html>
 
 <!-- Index
 GET /pokemon -->
+

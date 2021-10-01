@@ -34,7 +34,6 @@ app.put("/pokemon/:id", (req, res) => {
 app.post("/pokemon", (req, res) => {
     // res.render("new.ejs");
 });
-
 //EDIT
 app.get("/pokemon/:id/edit", (req, res) => {
     res.send("hello world5!")
