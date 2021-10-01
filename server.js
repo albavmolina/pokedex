@@ -1,11 +1,48 @@
 // Require Dependencies
 
+const { response } = require("express");
 const express = require("express");
 const app = express();// Initialize the Express Application 
 const pokemon = require("./models/pokemon.js");
 
+// INDUCES || Routes
+//INDEX
 app.get("/", (req, res) => {
-    res.send("hello world")
+    res.send("hello");
+});
+
+app.get("/pokemon", (req, res) => {
+    res.render("index.ejs", { allPokemon: pokemon });
+}); 
+
+//NEW
+app.get("/pokemon/new", (req, res) => {
+    res.send("hello world1!")
 })
 
+//DELETE
+app.delete("/pokemon/:id", (req, res) => {
+    res.send("hello world2!")
+})
+
+//UPDATE
+app.put("/pokemon/:id", (req, res) => {
+    res.send("hello world3!")
+})
+
+//CREATE
+app.post("/pokemon", (req, res) => {
+    res.send("hello world4!")
+})
+
+//EDIT
+app.get("/pokemon/:id/edit", (req, res) => {
+    res.send("hello world5!")
+})
+
+//SHOW
+app.get("/pokemon/:id", (req, res) => {
+    res.render("show.ejs", { allPokemon: pokemon[req.params.id] });
+});
+// Open a connection on host machine to listen for requests
 app.listen(3000)
