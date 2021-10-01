@@ -32,8 +32,8 @@ app.put("/pokemon/:id", (req, res) => {
 
 //CREATE
 app.post("/pokemon", (req, res) => {
-    res.send("hello world4!")
-})
+    res.render("new.ejs");
+});
 
 //EDIT
 app.get("/pokemon/:id/edit", (req, res) => {
@@ -44,5 +44,6 @@ app.get("/pokemon/:id/edit", (req, res) => {
 app.get("/pokemon/:id", (req, res) => {
     res.render("show.ejs", { allPokemon: pokemon[req.params.id] });
 });
+
 // Open a connection on host machine to listen for requests
 app.listen(3000)

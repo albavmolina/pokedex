@@ -4,13 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>show specific pokemon</title>
 </head>
 <body>
-  <h1> test show </h1>
+  <h1>  <%= allPokemon.name %></h1>  
+  <img src="<%= allPokemon.img%>">
+
+
+<h3>  stats: hp, attack, defense, spdefense, speed  </h3>
+<h5> The hp stat is  <%= allPokemon.stats.hp%>  </h5> 
+<h5> The attack stat is <%= allPokemon.stats.attack%> </h5>
+<h5> The defense stat is  <%= allPokemon.stats.defense%> </h5>
+<h5> The spdefense stat is  <%= allPokemon.stats.spdefense%> </h5>
+<h5> The speed stat is  <%= allPokemon.stats.speed%>   </h5>
+<h3>  Type:  <%= allPokemon.type %></h3>
+<img src="<%= allPokemon.img%>">
 </body>
 </html>
-
-
-<!-- Show
-GET /pokemon/:id -->
